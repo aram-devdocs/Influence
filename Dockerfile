@@ -1,26 +1,18 @@
-# Dockerfile for Influence
+# # Use a base image with C++ and CMake
+# FROM gcc:latest
 
-# Use Ubuntu as the base image
-FROM ubuntu:latest
+# # Install CMake and SFML dependencies
+# RUN apt-get update && \
+#     apt-get install -y cmake libsfml-dev
 
-# Install dependencies
-RUN apt-get update && \
-    apt-get install -y \
-    build-essential \
-    cmake \
-    libsfml-dev \
-    && rm -rf /var/lib/apt/lists/*
+# # Set the working directory inside the container
+# WORKDIR /app
 
-# Set the working directory
-WORKDIR /usr/src/influence
+# # Copy project files into the container
+# COPY . .
 
-# Copy the project files into the Docker container
-COPY . .
+# # Run the build script to compile the project with CMake
+# RUN chmod +x build.sh && ./build.sh
 
-# Run CMake to configure and build the project
-RUN mkdir -p build && cd build && \
-    cmake .. && \
-    make
-
-# Set the default command to execute the built game
-CMD ["./build/game/Influence"]
+# # Specify the command to run the application
+# CMD ["./run.sh"]

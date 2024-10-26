@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "../..//ui/src/ui.cpp"
 
 extern void initGameLogic();
 extern void renderUI();

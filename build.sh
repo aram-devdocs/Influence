@@ -1,5 +1,9 @@
-#!/bin/zsh
+#!/bin/bash
 
-echo "Building Docker image for Influence..."
-docker build -t influence .
-echo "Build complete."
+# Create a build directory if it doesn't exist
+mkdir -p build
+cd build
+
+# Run CMake to configure and build the project
+cmake ..
+make
