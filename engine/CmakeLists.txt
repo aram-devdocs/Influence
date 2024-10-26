@@ -1,0 +1,4 @@
+# engine/CMakeLists.txt
+
+add_library(engine src/engine.cpp)
+target_include_directories(engine PUBLIC ../include)

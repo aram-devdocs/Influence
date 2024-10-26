@@ -1,0 +1,5 @@
+# game/CMakeLists.txt
+
+add_executable(YourGame src/main.cpp)
+target_include_directories(YourGame PUBLIC ../include)
+target_link_libraries(YourGame engine ui)
