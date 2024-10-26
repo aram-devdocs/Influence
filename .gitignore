@@ -1,0 +1,46 @@
+# Ignore build and output directories
+build/
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# SFML or other library binaries, if built locally
+lib/
+bin/
+
+# MacOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python bytecode (if using Python scripts)
+__pycache__/
+*.py[cod]
+
+# Docker files
+*.container
+*.log
+
+# VS Code settings
+.vscode/
+
+# Miscellaneous
+*.log
+*.swp
+*.tmp
+*~
