@@ -1,23 +1,26 @@
-# Ignore build and output directories
-build/
-*.o
-*.obj
-*.so
-*.dll
-*.dylib
-*.exe
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-
-# SFML or other library binaries, if built locally
-lib/
+# Ignore build outputs
 bin/
+obj/
+*.exe
+*.dll
+*.pdb
 
-# MacOS specific files
+# MonoGame specific files
+# Ignore content pipeline intermediate and cache files
+*.mgcb
+*.xnb
+Content/bin/
+Content/obj/
+
+# Visual Studio specific
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# macOS specific files
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -28,19 +31,57 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Python bytecode (if using Python scripts)
-__pycache__/
-*.py[cod]
+# MonoGame Extended specific
+*.tmx
+*.tsx
+*.json
 
-# Docker files
-*.container
+# Dotnet specific files
+.project
+.idea/
+*.pidb
+*.aps
+*.dbmdl
+*.psess
+*.log
+.nuget/
+.ReSharper
+_ReSharper.Caches/
+
+# Ignore auto-generated files from NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Log files
 *.log
 
-# VS Code settings
-.vscode/
+# Ignore .NET user secrets
+secrets.json
 
-# Miscellaneous
-*.log
-*.swp
+# Rider-specific files
+.idea/
+*.sln.iml
+.idea/modules.xml
+.idea/*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/libraries
+
+# Ignore JetBrains Rider settings
+.idea/**/modules.xml
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/**/libraries
+
+# Ignore temporary files
 *.tmp
-*~
+*.temp
+
+# Ignore generated XML documentation files
+*.xml

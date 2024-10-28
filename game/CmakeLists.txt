@@ -1,6 +1,0 @@
-# game/CMakeLists.txt
-
-add_executable(Influence src/main.cpp)
-target_include_directories(Influence PUBLIC ../include)
-target_link_libraries(Influence sfml-graphics)
-target_link_libraries(Influence engine ui)

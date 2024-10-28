@@ -10,7 +10,7 @@ else
     PROJECT="GameClient"
 fi
 
-echo "Running $PROJECT..."
-dotnet run --project $PROJECT
+echo "Starting development mode for $PROJECT with file watching..."
+dotnet watch --project $PROJECT run
 
-echo "$PROJECT terminated."
+echo "$PROJECT development mode terminated."

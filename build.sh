@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# Create a build directory if it doesn't exist
-mkdir -p build
-cd build
+# Ensure the script stops on errors
+set -e
 
-# Run CMake to configure and build the project
-cmake ..
-make
+# Clean and build the solution
+echo "Cleaning and building the solution..."
+dotnet clean
+dotnet build
+
+echo "Build completed successfully!"
