@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Client;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -9,11 +10,16 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+    // public Engine _engine = new Engine();
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+
+        // _engine = new Engine();
+        System.Console.WriteLine("Game1 constructor");
     }
 
     protected override void Initialize()
@@ -23,7 +29,7 @@ public class Game1 : Game
         base.Initialize();
         // change window title to Influence
         Window.Title = "Influence";
-        
+
     }
 
     protected override void LoadContent()

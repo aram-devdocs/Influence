@@ -6,4 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  
+  <ItemGroup>
+    <!-- MonoGame and MonoGame.Extended packages -->
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.263" />
+    <PackageReference Include="MonoGame.Extended" Version="3.8.0" />
+    <PackageReference Include="MonoGame.Extended.Entities" Version="3.8.0" />
+    <PackageReference Include="MonoGame.Extended.Tiled" Version="3.8.0" />
+    <!-- <PackageReference Include="MonoGame.Extended.ViewportAdapters" Version="3.8.0" /> -->
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
 </Project>
